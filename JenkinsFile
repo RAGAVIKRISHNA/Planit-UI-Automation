@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven 3.8.1'
+        jdk 'jdk14'
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                '''
+            }
+        }
+        
+         stage ('Checkout') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                '''
+            }
+        }
+
+        stage ('Build') {
+            steps {
+                sh 'mvn clean install' 
+            }
+            post {
+                success {
+                    junit 'target/surefire-reports/**/*.xml' 
+                }
+            }
+        }
+    }
+}
