@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
+                sh "rm -rf Planit-UI-Automation"
                 sh "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
              withMaven {
                 // Run Maven on a Unix agent.
