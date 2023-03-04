@@ -8,6 +8,7 @@ pipeline {
             steps {
                git 'https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git'
         }
+        }
 
         stage ('Build') {
             steps {
