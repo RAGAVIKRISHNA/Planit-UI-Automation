@@ -1,33 +1,22 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.8.1'
-        jdk 'jdk14'
+        maven "M3"
     }
     stages {
-        stage ('Initialize') {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                '''
-            }
-        }
-        
          stage ('Checkout') {
             steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                '''
-            }
+               git 'https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git'
         }
 
         stage ('Build') {
             steps {
-                sh 'mvn clean install' 
+                sh "mvn clean install"
             }
             post {
                 success {
                     junit 'target/surefire-reports/**/*.xml' 
+                    archiveArtifacts 'target/*.jar'
                 }
             }
         }
