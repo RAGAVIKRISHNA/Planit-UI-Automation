@@ -9,7 +9,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 bat "rmdir /s/q Planit-UI-Automation"
                 bat "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
-                bat "echo Value of Java home %JAVA_HOME%"
+                bat "whoami"
                 bat "C:\\Users\\maven\\apache-maven-3.8.1\\bin\\mvn clean verify"
 }
             
