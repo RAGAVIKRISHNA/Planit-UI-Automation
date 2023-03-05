@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 bat "rmdir /s/q Planit-UI-Automation"
-                bat "set JAVA_HOME=C:\\Program Files\\Java\\jdk-14.0.2"
+                bat "set JAVA_HOME=C:\\Users\\java\\openjdk17\\jdk-17"
                 bat "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
                 bat "C:\\Users\\maven\\apache-maven-3.8.1\\bin\\mvn clean verify"
 }
