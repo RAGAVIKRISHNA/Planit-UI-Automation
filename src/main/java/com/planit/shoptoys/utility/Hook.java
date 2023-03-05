@@ -15,9 +15,7 @@ public class Hook {
 	{
 		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
 		options.addArguments("--no-sandbox");
-		options.setHeadless(true);
 		driver= new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
