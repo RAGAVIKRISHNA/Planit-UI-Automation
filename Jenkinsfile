@@ -7,7 +7,6 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                bat "rmdir /s/q Planit-UI-Automation"
                 bat "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
                 bat "C:\\Users\\maven\\apache-maven-3.8.1\\bin\\mvn clean verify"
 }
