@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 bat "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
-             withMaven {
+             maven(maven : 'Maven_3.8.1') {
                 
                 // Run Maven on a Unix agent.
                 bat "mvn clean verify"
