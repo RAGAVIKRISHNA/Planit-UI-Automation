@@ -12,7 +12,6 @@ public class Hook {
 
 	public static WebDriver getDriver()
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
