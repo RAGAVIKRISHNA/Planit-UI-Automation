@@ -54,7 +54,7 @@ public class FeedbackPage {
   
   public void click_contact() throws InterruptedException {
 	  JavascriptExecutor executor = (JavascriptExecutor) driver;
-	  executor.executeScript("arguments[0].scrollIntoView(true);", contact)
+	  executor.executeScript("arguments[0].scrollIntoView(true)", contact);
 	  Thread.sleep(20);
   }
  
