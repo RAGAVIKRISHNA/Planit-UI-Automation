@@ -8,7 +8,8 @@ pipeline {
                 sh "rm -rf Planit-UI-Automation"
                 sh "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
              withMaven {
-                sh "cp /var/jenkins_home/tools/chromedriver /var/jenkins_home/workspace/Planit-Assessment"
+                sh "cd tools/chromedriver"
+                sh "cp chromedriver /var/jenkins_home/workspace/Planit-Assessment"
                 // Run Maven on a Unix agent.
                 sh "mvn clean verify"
 }
