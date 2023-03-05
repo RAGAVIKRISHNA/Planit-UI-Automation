@@ -10,7 +10,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 bat "rmdir /s/q Planit-UI-Automation"
                 bat "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
-                bat "whoami"
+                bat "echo %Path%"
                 bat "mvn clean verify"
 }
             
