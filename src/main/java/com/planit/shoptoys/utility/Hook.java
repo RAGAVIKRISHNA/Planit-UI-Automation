@@ -18,7 +18,7 @@ public class Hook {
 		options.addArguments("--window-size=1920,1080");
     		options.addArguments("--start-maximized");
 		options.addArguments("--headless");
-		options.addArguments("--no-sandbox");
+		//options.addArguments("--no-sandbox");
 		options.setHeadless(true);
 		driver= new ChromeDriver(options);
 		driver.manage().window().maximize();
