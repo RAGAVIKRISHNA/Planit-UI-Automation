@@ -11,7 +11,7 @@ pipeline {
                // bat "set PATH=C:\\Users\\RAGAVI MUTHUKRISHNAN\\Maven\\apache-maven-3.8.1\\bin%PATH%"
                 bat "SET MAVEN_HOME=C:\\Users\\RAGAVI MUTHUKRISHNAN\\Maven\\apache-maven-3.8.1"
                 bat "echo %PATH%"
-                bat " C:\\Users\RAGAVI MUTHUKRISHNAN\\Maven\\apache-maven-3.8.1\\bin\mvn clean verify"
+                bat " C:\\Users\RAGAVI MUTHUKRISHNAN\\Maven\\apache-maven-3.8.1\\bin\\mvn clean verify"
 }
             
 
