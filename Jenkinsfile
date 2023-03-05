@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment {
                  JAVA_HOME="C:\\Program Files\\Java\\jdk-14.0.2"
-                 MVN_HOME="C:\\Users\\maven\\apache-maven-3.8.1\\bin\\mvn"
     }
     stages {
         stage('Build') {
@@ -10,8 +9,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 bat "rmdir /s/q Planit-UI-Automation"
                 bat "git clone https://github.com/RAGAVIKRISHNA/Planit-UI-Automation.git"
-                bat "echo %Path%"
-                bat "mvn clean verify"
+                bat "C:\\Users\\maven\\apache-maven-3.8.1\\bin\\mvn clean verify"
 }
             
 
